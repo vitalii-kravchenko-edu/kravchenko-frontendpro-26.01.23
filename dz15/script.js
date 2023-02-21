@@ -6,7 +6,9 @@ console.log(array);
 // Результат: [1, 2, 3, 4, 6, 7]
 
 
-function removeElement(myArr, index) {
-    const result = myArr.splice([index - 1], 1);
-    return result;
+function removeElement(myArr, elem) {
+    const index = myArr.findIndex(i => i === elem);
+    if (index > 0) {
+        myArr.splice(index, 1);
+    }
 }
