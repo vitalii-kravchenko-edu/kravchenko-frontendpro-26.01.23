@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="registrationForm">
+      <h2>Форма реєстрації</h2>
+      
+      <form id="registrationForm">
+        <label for="firstName">Ім'я:</label>
+        <input type="text" id="firstName" required><br><br>
+    
+        <label for="lastName">Прізвище:</label>
+        <input type="text" id="lastName" required><br><br>
+    
+        <label for="dateOfBirth">Дата народження:</label>
+        <input type="text" id="dateOfBirth" required><br><br>
+    
+        <label for="gender">Стать:</label>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">Чоловіча</label>
+        <input type="radio" id="female" name="gender" value="female" required>
+        <label for="female">Жіноча</label><br><br>
+    
+        <label for="city">Місто:</label>
+        <select id="city" required>
+          <option value=""></option>
+          <option value="kyiv">Київ</option>
+          <option value="lviv">Львів</option>
+          <option value="odesa">Одеса</option>
+        </select><br><br>
+    
+        <label for="address">Адреса:</label>
+        <textarea id="address" required></textarea><br><br>
+    
+        <label for="languages">Мови, якими володієте:</label><br>
+        <input type="checkbox" id="english" name="languages" value="english">
+        <label for="english">Англійська</label><br>
+        <input type="checkbox" id="spanish" name="languages" value="spanish">
+        <label for="spanish">Іспанська</label><br>
+        <input type="checkbox" id="french" name="languages" value="french">
+        <label for="french">Французька</label><br>
+              
+        <br>
+        <button type="button" id="button">Зберегти</button>
+      </form>
+    </div>
+    
+    <div id="registrationTable" style="display: none;">
+      <h2>Таблиця з даними</h2>
+      <table class="table">
+        <tr>
+          <th>Ім'я</th>
+          <th>Прізвище</th>
+          <th>Дата народження</th>
+          <th>Стать</th>
+          <th>Місто</th>
+          <th>Адреса</th>
+          <th>Мови, якими володіє</th>
+        </tr>
+        <tbody id="registrationData"></tbody>
+      </table>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
